@@ -7,14 +7,14 @@ function showDateTime() {
     const hours = now.getHours();
     const minutes = now.getMinutes();
 
-    console.log(`${date}/${month}/${year} ${minutes}:${hours}`);
+    console.log(`${date}/${month}/${year} ${hours}:${minutes}`);
 }
 
 showDateTime();
 
 //Declare a function name swapValues. This function swaps value of x to y (without using extra variables)
 function swapValues(x, y) {
-    return `${y} ${x}`;
+    return  [x, y] = [y, x];
 }
 
 console.log(swapValues(3, 4));
