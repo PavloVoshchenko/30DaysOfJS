@@ -10,7 +10,8 @@ console.log(newArr);
 const fiveCharactersArr = [];
 
 for (let i = 0; i < countriesArray.length; i++) {
-    countriesArray[i].length == 5 ? fiveCharactersArr.push(countriesArray[i]) : console.log('Not find the country containing only 5 characters');
+    if(countriesArray[i].length == 5)
+     fiveCharactersArr.push(countriesArray[i]);
 }
 console.log(fiveCharactersArr);
 
@@ -37,9 +38,10 @@ For the following tasks use countries array from 06_Day_Loops/06_day_starter/dat
 
 //Find the country containing the hightest number of characters in the countries array
 let country = countries[0];
+let maxLenght = 0;
 for (let i = 1; i < countries.length; ++i) {
-    if (countries[i].length > max.length) {
-        max = countries[i];
+    if (countries[i].length > maxLenght) {
+        maxLenght = countries[i];
     }
 }
 console.log(max);
